@@ -31,16 +31,6 @@ var lineL = ["8th", "6th", "Union Square", "3rd", "1st"];
 var line6 = ["Grand Station", "33rd", "28th", "23rd", "Union Square", "Astor Place"];
 var mtaLine = [lineN, lineL, line6];
 
-var start;
-var stop;
-
-
-var mtaStart = mtaLine[line1].indexOf(start);
-var mtaStop = mtaLine[line2].indexOf(stop);
-var intersect1 = mtaLine[line1].indexOf("Union Square");
-var intersect2 = mtaLine[line2].indexOf("Union Square");
-
-
 
 // start > end for for forward
 
@@ -48,38 +38,42 @@ var planTrip = function(line1, start, line2, stop) {
 	var lineN = 0;
 	var lineL = 1;
 	var line6 = 2;
+	var mtaStart = mtaLine[line1].indexOf(start);
+	var mtaStop = mtaLine[line2].indexOf(stop);
+	var intersect1 = mtaLine[line1].indexOf("Union Square");
+	var intersect2 = mtaLine[line2].indexOf("Union Square");
 
 if (line1 === line2) {
-	var trip1 = [];	
 		for (var i = mtaStart; i < mtaStop; i++) {	
 			if(i !== mtaStop) {
 				trip1.push(mtaStop[i]);
 					console.log(trip1);
 				}
 				 
-		}	else { 
+			else 
+				for (var i = mtaStop; i < mtaStart; i++) { 
 			trip1.push(mtaStart[i]);
 			console.log(trip1);
-			}
-	}
-else
+			}	
+	}else {
 	var trip2 = [];
 		for (var i = mtaStart; i < intersect1; i++) {	
 			if(i !== mtaStop) {
-			trip2.push(mtaStart - intersect1);
+			trip2.push(mtaStart[i] - intersect1);
 			console.log(trip2);
+			console.log("Union Square");
 		}
 	}
-		console.log("Union Square");
-		
 	var trip3 = [];
 		for (var i = mtaStop; i < intersect2; i++) {
-			if(i !== mtaStop) {
-			trip3.push(mtaStop - intersect2);
+			if(i !== mtaStart) {
+			trip3.push(mtaStop[i] - intersect2);
 			console.log(trip3);	
 			}
 		}
-};					
+		}
+};	
+// }				
 // if (line !== line2) {
 
 

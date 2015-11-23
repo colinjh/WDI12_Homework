@@ -1,0 +1,9 @@
+#dance {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+#cat {
+	padding-top: 400px;
+	z-index: 1;
+}

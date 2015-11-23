@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Map</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+</head>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(37.3093131,-122.0786639),
+    zoom:12,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<body>
+	<div class="container">
+	<nav>
+			<ul>
+				<li class="bar"><a href="index.html">Home</a></li>
+				<li class="bar"><a href="trivia.html">Trivia</a></li>
+				<li class="bar"><a target = "_blank" href="http://www.wall.org/~larry/">Larry's Website</a></li>
+				<li class="bar"><a href="map.html">Where's Larry?</a></li>
+			</ul>
+
+		</nav>
+
+<iframe src="http://www.map-generator.org/332f0444-a94e-4ed4-82db-d3945078bcfc/iframe-map.aspx" scrolling="no" width="400px" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br><small><a href="http://www.map-generator.org/332f0444-a94e-4ed4-82db-d3945078bcfc/large-map.aspx" target="_blank">Open large map<a/></small>
+
+</div>	
+</body>
+</html>
