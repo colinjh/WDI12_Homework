@@ -1,0 +1,24 @@
+<h1>Did you mean:</h1>
+
+
+<!-- div class="list">
+  <ul>
+    <li link ='/movies' movie_title = @first_movie ><%= @first_movie %></li>
+    <li><%= @second_movie %></li>
+    <li><%= @third_movie %></li>
+    <li><%= @fourth_movie %></li>
+    <li><%= @fifth_movie %></li>
+  </ul>
+</div> -->
+
+<img src="<%= @poster %>" alt="">
+
+<table>
+<% @all_movies.each do |elem| %>
+  <div class='container'>
+    <a>
+     <img <%= elem['Poster'] %>" alt="">
+    </a>
+  </div>
+<% end %>
+</table>

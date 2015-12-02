@@ -36,4 +36,15 @@ def difference
   puts d
 end  
 
-difference
+#difference
+
+def sum_of_squares2(num = 10)
+  result = 0
+1.upto(num) { |i| result += (i ** 2)} 
+result
+end
+
+def square_of_sums2(num = 10)
+  result = 0
+(1..num).reduce(:+) **2
+end
