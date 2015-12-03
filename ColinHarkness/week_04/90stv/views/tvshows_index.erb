@@ -1,0 +1,8 @@
+<ul>
+<% @tvshows.each do |show| %>  
+  <li>
+    <a href="/tvshows/<%= show['id'] %>">
+  <%= show['name'] %>
+  </li>
+<% end %>  
+</ul>
